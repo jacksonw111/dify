@@ -397,8 +397,8 @@ const translation = {
   about: {
     changeLog: 'Registro de Alterações',
     updateNow: 'Atualizar agora',
-    nowAvailable: 'Dify {{version}} já está disponível.',
-    latestAvailable: 'Dify {{version}} é a última versão disponível.',
+    nowAvailable: 'OctObet {{version}} já está disponível.',
+    latestAvailable: 'OctObet {{version}} é a última versão disponível.',
   },
   appMenus: {
     overview: 'Visão Geral',
