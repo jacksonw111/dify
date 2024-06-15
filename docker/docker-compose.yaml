@@ -482,6 +482,8 @@ services:
       - ./nginx/proxy.conf:/etc/nginx/proxy.conf
       - ./nginx/conf.d:/etc/nginx/conf.d
       - ./nginx/ssl:/etc/ssl
+      - /etc/letsencrypt/live/octobet.justsayai.pro/privkey.pem:/etc/letsencrypt/live/octobet.justsayai.pro/privkey.pem
+      - /etc/letsencrypt/live/octobet.justsayai.pro/fullchain.pem:/etc/letsencrypt/live/octobet.justsayai.pro/fullchain.pem
     depends_on:
       - api
       - web
