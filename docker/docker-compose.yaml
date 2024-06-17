@@ -320,7 +320,7 @@ services:
 
   # Frontend web application.
   web:
-    image: registry.eu-west-1.aliyuncs.com/roi_cloud/octobet:0.0.3
+    image: registry.eu-west-1.aliyuncs.com/roi_cloud/octobet:0.0.4
     restart: always
     environment:
       # The base URL of console application api server, refers to the Console base URL of WEB service if console domain is
