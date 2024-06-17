@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { useContext } from 'use-context-selector'
 import TemplateVarPanel, { PanelTitle, VarOpBtnGroup } from '../value-panel'
 import s from './style.module.css'
-import { AppInfo, ChatBtn, EditBtn, FootLogo, PromptTemplate } from './massive-component'
+import { AppInfo, EditBtn, FootLogo, PromptTemplate } from './massive-component'
 import type { SiteInfo } from '@/models/share'
 import type { PromptConfig } from '@/models/debug'
 import { ToastContext } from '@/app/components/base/toast'
@@ -173,12 +173,15 @@ const Welcome: FC<IWelcomeProps> = ({
     return !hasEmptyInput
   }
 
-  const handleChat = () => {
-    if (!canChat())
-      return
+  // const handleChat = () => {
+  //   if (!canChat())
+  //     return
 
+  //   onStartChat(inputs)
+  // }
+  useEffect(() => {
     onStartChat(inputs)
-  }
+  }, [])
 
   const renderNoVarPanel = () => {
     if (isPublicVersion) {
@@ -197,7 +200,7 @@ const Welcome: FC<IWelcomeProps> = ({
               </>
             }
           >
-            <ChatBtn onClick={handleChat} />
+            {/* <ChatBtn onClick={handleChat} /> */}
           </TemplateVarPanel>
         </div>
       )
@@ -210,7 +213,7 @@ const Welcome: FC<IWelcomeProps> = ({
           <AppInfo siteInfo={siteInfo} />
         }
       >
-        <ChatBtn onClick={handleChat} />
+        {/* <ChatBtn onClick={handleChat} /> */}
       </TemplateVarPanel>
     )
   }
@@ -224,10 +227,10 @@ const Welcome: FC<IWelcomeProps> = ({
         }
       >
         {renderInputs()}
-        <ChatBtn
+        {/* <ChatBtn
           className='mt-3 mobile:ml-0 tablet:ml-[128px]'
           onClick={handleChat}
-        />
+        /> */}
       </TemplateVarPanel>
     )
   }
